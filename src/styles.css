@@ -1,0 +1,20 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+.center {
+    text-align: center;
+   margin-top: 10px;
+}
+.bg {
+    /* The image used */
+    background-image: url("assets/bgimage1.jpg");
+
+    /* Full height */
+    height: 80%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
