@@ -1,2 +1,19 @@
+<ngb-carousel [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators" >
+    <ng-template ngbSlide *ngFor="let image of images">
+        <div [style.backgroundImage]="'url('+ image +')'" style="height:500px;background-position: center;    background-repeat: no-repeat;    background-size: cover;">
+            <IMG  class="centerimage" SRC="assets/logo.jpg" style="height:60px;">
+        </div>
+    </ng-template>
+    <!-- <ng-template ngbSlide>
+            <div style="background-image: url(assets/bgimage2.jpg);height:500px;background-position: center;    background-repeat: no-repeat;    background-size: cover;">
+                <IMG  class="centerimage" SRC="assets/logo.jpg" style="height:60px;">
+                </div>
+    </ng-template>
+    <ng-template ngbSlide>
+            <div style="background-image: url(assets/bgimage3.jpg);height:500px;background-position: center;    background-repeat: no-repeat;    background-size: cover;">
+                <IMG  class="centerimage" SRC="assets/logo.jpg" style="height:60px;">
+                </div>
+    </ng-template> -->
+</ngb-carousel>
 <app-contactus></app-contactus>
 <app-footer></app-footer>

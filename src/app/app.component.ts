@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'propsols-app';
+  images=["assets/bgimage1.jpg","assets/bgimage2.jpg","assets/bgimage3.jpg"];
+  showNavigationArrows = false;
+  showNavigationIndicators = true;
 }
