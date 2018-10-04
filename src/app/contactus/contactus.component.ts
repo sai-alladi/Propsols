@@ -9,7 +9,7 @@ import {ContactDetails} from '../Models/ContactDetails';
 })
 export class ContactusComponent implements OnInit {
   
-  buttonDisabled: boolean = true;
+  buttonDisabled: boolean = false;
   contactDetails : ContactDetails;
   closeResult: string;
   constructor(private modalService: NgbModal) {
@@ -30,7 +30,7 @@ export class ContactusComponent implements OnInit {
 
   public  IsValdated():boolean
   {
-    return true;
+    return this.contactDetails.name == "";
   }
 
   private getDismissReason(reason: any): string {

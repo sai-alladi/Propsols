@@ -9,23 +9,16 @@
       <form>
         <div class="form-group" >
           <label for="customerName">Name :</label>
-          <input id="customerName" value ="{{contactDetails.name}}" (input)='contactDetails.name = $event.target.value' class="form-control" placeholder="name" >
+          <input id="customerName" [(ngModel)] ="contactDetails.name" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="name" >
           <label for="mobileNumber">Mobile Number :</label>
-          <input id="mobileNumber" value ="{{contactDetails.phoneNumber}}" (input)='contactDetails.phoneNumber = $event.target.value' class="form-control" placeholder="mobile Number" >
+          <input id="mobileNumber" [(ngModel)] ="contactDetails.phoneNumber" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="mobile Number" >
           <label for="email">Email :</label>
-          <input id="email" value ="{{contactDetails.email}}" (input)='contactDetails.email = $event.target.value' class="form-control" placeholder="email" >
-          <!-- <div class="input-group">
-            <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
-            <div class="input-group-append">
-              <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
-            </div>
-          </div> -->
+          <input id="email" [(ngModel)] ="contactDetails.email" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="email" >
         </div>
-        
       </form>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark"  (click)="modal.close('Save click')">Save</button>
+      <button type="button" class="btn btn-outline-dark"  [disabled]="buttonDisabled"  (click)="modal.close('Save click')">Save</button>
     </div>
   </ng-template>
   <div class="middle">
