@@ -31,10 +31,11 @@ export class ContactusComponent implements OnInit {
       //alert("Name is :"+this.contactDetails.name+ "\nMobile is :"+ this.contactDetails.phoneNumber + "\nEmail is :"+ this.contactDetails.email);
       try {
             var httpresponseObject =  this.http.post<ContactDetails>(this.host, this.contactDetails, this.httpOptions).pipe(
-          tap((obj: ContactDetails) =>this.log(obj.name) ),
+          tap((obj: ContactDetails) =>this.log(obj.Name) ),
           catchError(this.handleError<ContactDetails>('addcontact'))
         ); 
         httpresponseObject.subscribe(result => {
+          this.log(result.Id);
           alert("You have done your job, just relax, one of our executive will get in touch with you shortly");  
         });
         
@@ -53,7 +54,7 @@ export class ContactusComponent implements OnInit {
 
   public  IsValdated():boolean
   {
-    return this.contactDetails.name == "";
+    return this.contactDetails.Name == "";
   }
 
   private getDismissReason(reason: any): string {

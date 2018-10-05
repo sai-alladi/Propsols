@@ -7,12 +7,14 @@ import { HttpClientModule }    from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    ContactusComponent
+    ContactusComponent,
+    TestimonialsComponent
   ],
   imports: [
     BrowserModule,
